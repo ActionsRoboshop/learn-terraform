@@ -6,10 +6,10 @@ fruits = {
   }
   banana = {
     fruit_name = "banana"
-    cost       = 50
+    # cost       = 50
   }
   water-melon = {
     fruit_name = "water-melon"
-    cost       = 50
+    #cost       = 50
   }
 }
