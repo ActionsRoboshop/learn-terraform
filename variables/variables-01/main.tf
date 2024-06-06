@@ -15,6 +15,6 @@
 resource "null_resource" "sample2" {
   for_each  = var.fruits
   provisioner "local-exec" {
-    command   = "echo  fruitname=${lookup(lookup(var.fruits,each.value,"default"),"fruit_name","common")}"
+    command   = "echo  fruitname=${lookup(lookup(var.fruits,each.key,"default"),"fruit_name","common")}"
   }
 }
