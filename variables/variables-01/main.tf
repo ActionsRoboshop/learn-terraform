@@ -5,9 +5,16 @@
 #  }
 #}
 
+#resource "null_resource" "sample1" {
+#  for_each  = var.fruits
+#  provisioner "local-exec" {
+#    command   = "echo  fruitname=${var.fruits[each.key].fruit_name} cost=${var.fruits[each.key]["cost"]}"
+#  }
+#}
+
 resource "null_resource" "sample1" {
   for_each  = var.fruits
   provisioner "local-exec" {
-    command   = "echo  fruitname=${var.fruits[each.key].fruit_name} cost=${var.fruits[each.key]["cost"]}"
+    command   = "echo  fruitname=${lookup(lookup(var.fruits,each.value,"default"),"fruit_name","common")}"
   }
 }
