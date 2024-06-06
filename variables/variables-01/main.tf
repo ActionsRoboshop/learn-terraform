@@ -1,6 +1,6 @@
 resource "null_resource" "sample" {
   triggers = {
-    name = "hello"
+    name = "hello1"
   }
   for_each  = var.fruits
   provisioner "local-exec" {
