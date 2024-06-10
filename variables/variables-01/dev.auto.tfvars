@@ -1,6 +1,6 @@
 fruits = {
-  apple = {
-    fruit_name = "apple"
+  apple1 = {
+    fruit_name = "apple1"
     cost       = "auto-100"
   }
   banana = {

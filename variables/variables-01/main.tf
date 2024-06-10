@@ -19,7 +19,7 @@ resource "null_resource" "sample2" {
   }
 }
 
-output "apple_cost" {
+output "apple1_cost" {
   value = var.fruits["apple"]["cost"]
 }
 
